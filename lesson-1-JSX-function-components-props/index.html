@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img >
+    <input autocomplete="" />
+<button id="btn">Show</button>
+<ul id="list">
+
+</ul>
+<script>
+    // const btn = document.getElementById("btn");
+    // console.dir(btn)
+    const toDoList = document.getElementById("list");
+    const toDoItems = ["Погладить кота", "Забинтовать руку", "Погладить кота другой рукой"];
+
+    const renderList = () => {
+        const elements = toDoItems.map(text => `<li>${text} <button type='button'>Delete</button></li>`).join("");
+        toDoList.innerHTML = "";
+        toDoList.insertAdjacentHTML("beforeend", elements);
+        const elementItems = document.querySelectorAll("#list button");
+        elementItems.forEach((element, index) => element.addEventListener("click", function(){
+            toDoItems.splice(index, 1);
+            renderList();
+        }))
+    }
+    
+    renderList()
+</script>
+</body>
+</html>
