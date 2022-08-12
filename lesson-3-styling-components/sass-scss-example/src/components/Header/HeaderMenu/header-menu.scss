@@ -1,0 +1,15 @@
+@import "src/shared/styles/common.scss";
+
+.header-menu {
+    @include flex(center, center);
+    list-style: none;
+
+    &-link {
+        display: inline-block;
+        text-decoration: none;
+        color: $primary-color;
+        background-color: #fff;
+        padding: 10px 15px;
+        border: 1px solid $primary-color;
+    }
+}
