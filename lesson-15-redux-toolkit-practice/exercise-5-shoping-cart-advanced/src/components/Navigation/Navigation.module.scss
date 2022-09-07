@@ -1,0 +1,49 @@
+.nav {
+    padding: 20px 0px;
+}
+
+.link {
+    margin-right: 40px;
+
+    padding: 5px 5px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3;
+
+    color: rgba(65,
+        65,
+        65);
+
+
+    &:hover,
+    :focus {
+        outline: 1px;
+        outline-offset: 1px;
+        background: rgb(65, 65, 65);
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.activeLink {
+    margin-right: 40px;
+    color: rgb(245, 197, 24);
+
+    padding: 5px 5px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover,
+    :focus {
+        outline: 1px;
+        outline-offset: 1px;
+        background: rgb(65, 65, 65);
+    }
+
+}
